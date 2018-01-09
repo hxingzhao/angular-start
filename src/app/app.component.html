@@ -1,0 +1,12 @@
+<div class="fullView app-content">
+	<router-outlet></router-outlet>
+</div>
+
+<!-- 方便全局使用p-confirmDialog及p-growl -->
+<p-confirmDialog [header]="'系统提示'" #pConfirm>
+	<p-footer>
+		<button *ngIf="pConfirm.acceptVisible" pButton type="button" [icon]="'fa-check'" [label]="'确认'" (click)="pConfirm.accept()"></button>
+		<button *ngIf="pConfirm.rejectVisible" pButton type="button" class="ui-button-secondary" [icon]="'fa-close'" [label]="'取消'" (click)="pConfirm.reject()"></button>
+	</p-footer>
+</p-confirmDialog>
+<p-growl></p-growl>

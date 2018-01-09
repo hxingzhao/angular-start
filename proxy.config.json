@@ -1,0 +1,10 @@
+{
+	"/thflood4-branch": {
+		"target": "http://192.168.0.82",
+		"secure": false
+	},
+	"/mockjsdata/11": {
+		"target": "http://192.168.0.172:8080",
+		"secure": false
+	}
+}

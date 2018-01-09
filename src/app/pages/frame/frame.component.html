@@ -1,0 +1,73 @@
+<div class="header">
+	<div class="left" routerLink="/frame/custom/rainfall">
+		<p class="p-title">{{title}}</p>
+		<p class="p-sub">实时水雨情数据导出</p>
+	</div>
+	<div class="right">
+		<ul class="nav navbar-nav navbar-right">
+			<!--<li class="help scanCode" (click)="toggleScanCode()" title="APP下载">
+				<span class="fa fa-cloud-download"></span>
+			</li>
+			<li class="help" title="系统通知">
+				<span class="Eicons start-tongzhi"></span>
+				<span class="notice">6</span>
+			</li>
+			<li class="help" title="系统帮助">
+				<span class="Eicons start-bangzhu"></span>
+			</li>-->
+			<!--<li class="dropdown" (click)="tieredMenu.toggle($event)">
+				<span>
+					<img src="./assets/images/home/user.png">
+					<span>admin</span>
+					<span class="caret"></span>
+				</span>
+			</li>-->
+		</ul>
+		<p-tieredMenu #tieredMenu [model]="items" [appendTo]="'body'" [popup]="true"></p-tieredMenu>
+	</div>
+</div>
+<div class="mainFrame">
+	<div class="side">
+		<ul class="list">
+			<li class="list-item">
+				<div routerLink="/frame/rainfall" routerLinkActive="active" class="container">
+					<div class="icon">
+						<span class="Eicons icon-rain-full"></span>
+					</div>
+					<div class="title">
+						<a>
+							<span>降雨数据</span>
+						</a>
+					</div>
+				</div>
+			</li>
+			<li class="list-item">
+				<div routerLink="/frame/water" routerLinkActive="active" class="container">
+					<div class="icon">
+						<span class="Eicons icon-water"></span>
+					</div>
+					<div class="title">
+						<a>
+							<span>水位数据</span>
+						</a>
+					</div>
+				</div>
+			</li>
+			<li class="list-item">
+				<div routerLink="/frame/flux" routerLinkActive="active" class="container">
+					<div class="icon">
+						<span class="Eicons icon-liuliang"></span>
+					</div>
+					<div class="title">
+						<a>
+							<span>流量数据</span>
+						</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="fullView frame-content">
+		<router-outlet></router-outlet>
+	</div>
+</div>

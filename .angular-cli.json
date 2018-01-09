@@ -1,0 +1,65 @@
+{
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"project": {
+		"name": "angular-start"
+	},
+	"apps": [
+		{
+			"root": "src",
+			"outDir": "dist",
+			"assets": [
+				"assets",
+				"favicon.ico",
+				"proxy.config",
+				"proxy.jsp"
+			],
+			"index": "index.html",
+			"main": "main.ts",
+			"polyfills": "polyfills.ts",
+			"tsconfig": "tsconfig.app.json",
+			"prefix": "",
+			"styles": [
+				"./styles.scss",
+				"./assets/fonts/iconfont.scss",
+				"../node_modules/font-awesome/css/font-awesome.min.css",
+				"../node_modules/bootstrap/dist/css/bootstrap.min.css",
+				"../node_modules/quill/dist/quill.core.css",
+				"../node_modules/quill/dist/quill.snow.css",
+				"../node_modules/primeng/resources/themes/bootstrap/theme.css",
+				"../node_modules/primeng/resources/primeng.min.css",
+				"../node_modules/essence-ng2-datetimepicker/dist/assets/css/bootstrap-datetimepicker.min.css"
+			],
+			"scripts": [
+				"../node_modules/jquery/dist/jquery.min.js",
+				"../node_modules/moment/min/moment.min.js",
+				"../node_modules/moment/min/moment-with-locales.min.js",
+				"../node_modules/essence-ng2-datetimepicker/dist/assets/js/bootstrap-datetimepicker.min.js",
+				"../node_modules/quill/dist/quill.js",
+				"../node_modules/bootstrap/dist/js/bootstrap.min.js"
+			],
+			"environmentSource": "environments/environment.ts",
+			"environments": {
+				"dev": "environments/environment.ts",
+				"test": "environments/environment.test.ts",
+				"prod": "environments/environment.prod.ts"
+			}
+		}
+	],
+	"lint": [
+		{
+			"project": "src/tsconfig.json"
+		}
+	],
+	"defaults": {
+		"styleExt": "scss",
+		"component": {
+			"spec": false
+		},
+		"service": {
+			"spec": false
+		},
+		"pipe": {
+			"spec": false
+		}
+	}
+}

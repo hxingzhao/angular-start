@@ -1,0 +1,42 @@
+<div class="ui-g e-container">
+	<div class="ui-g-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				{{titel}}
+				<button pButton type="button" label="导出" [disabled]='isload' (click)="onExport()"></button>
+			</div>
+			<div class="panel-body">
+				<div class="ui-g">
+					<div class="ui-g-6">
+						<label>开始时间:</label>
+						<p-calendar #p [(ngModel)]="setTime.startTime" [maxDate]='maxDate' [locale]="es" appendTo='body'
+									[showTime]="true"
+									[monthNavigator]="true" [yearNavigator]="true"
+									[yearRange]="yearMax"
+									dateFormat="yy/mm/dd"></p-calendar>
+					</div>
+					<div class="ui-g-6">
+						<label>结束时间:</label>
+						<p-calendar #s [(ngModel)]="setTime.endTime" [maxDate]='maxDate' [locale]="es" appendTo='body'
+									[showTime]="true"
+									[monthNavigator]="true" [yearNavigator]="true"
+									[yearRange]="yearMax"
+									dateFormat="yy/mm/dd"></p-calendar>
+					</div>
+				</div>
+				<hr>
+				<div class="ui-g">
+					<div class="ui-g-4" *ngFor="let site of siteList">
+						<p-checkbox name="groupname"
+									[value]="site.value"
+									[label]='site.name'
+									[(ngModel)]="selectedValues"
+									disabled>
+						</p-checkbox>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<i *ngIf='isload' class="fa fa-spinner fa-spin"></i>

@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+
+// 表单验证通过
+.ng-valid[required], .ng-valid.required {
+	border-left: 5px solid #42A948;
+}
+
+// 表单验证未通过
+.ng-invalid:not(form) {
+	border-left: 5px solid #A94442;
+}
+
+// 解决ui-g下ui-button的icon与文字重叠的问题
+.ui-g {
+	.ui-button:not(.ui-button-text-only) {
+		padding-left: 1em !important;
+	}
+}
+
+// 占据全屏
+.fullView {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+// 圆角按钮
+.radius-button {
+	border-radius: 20px !important;
+	outline: none !important;
+}
+
+.tree-handler {
+	&.add {
+		color: #5CB85C !important;
+	}
+	&.edit {
+		color: #EC971F !important;
+	}
+	&.delete {
+		color: #D9534F !important;
+	}
+	&.lock {
+		color: #000000 !important;
+	}
+}
+
+// 移上去的样式
+.ui-menuitem-active {
+	.tree-handler {
+		color: #FFFFFF !important;
+	}
+}
+
+.tree-handler {
+	&.add {
+		color: #5CB85C !important;
+	}
+	&.edit {
+		color: #EC971F !important;
+	}
+	&.delete {
+		color: #D9534F !important;
+	}
+	&.lock {
+		color: #000000 !important;
+	}
+}
+
+// 移上去的样式
+.ui-menuitem-active {
+	.tree-handler {
+		color: #FFFFFF !important;
+	}
+}
+
+label {
+	margin-bottom: 0 !important;
+}
+
+
+
+
+
+
